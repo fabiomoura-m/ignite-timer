@@ -11,6 +11,12 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+  @media (max-width: 600px) {
+    padding: 1rem;
+    h1 {
+      font-size: 1.125rem;
+    }
+  }
 `
 export const HistoryList = styled.div`
   flex: 1;
@@ -20,7 +26,6 @@ export const HistoryList = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
     max-height: 100%;
 
     th {
@@ -56,6 +61,23 @@ export const HistoryList = styled.div`
 
       &:last-child {
         padding-right: 1.5rem;
+      }
+    }
+    @media (max-width: 768px) {
+      td {
+        &:first-child {
+          width: 25%;
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      th {
+        padding: 0.875rem;
+        font-size: 0.75rem;
+      }
+      td {
+        font-size: 0.75rem;
+        padding: 0.5rem;
       }
     }
   }
